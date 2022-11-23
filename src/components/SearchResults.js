@@ -54,12 +54,13 @@ export default function SearchResults(props) {
       },
     },
   ]);
-  const url = "https://superheroapi.com/api/3409596655930415/" + props.query;
+  const url = "https://superheroapi.com/api/3409596655930415/search/" + props.query;
   const fetchPost = () => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
+        setState(res.results)
       });
   };
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function SearchResults(props) {
   return (
     <div className="container">
       <div className="container mt-5">
-        <h2 className="fw-bold text-success">Popular Superheroes</h2>
+        <h2 className="fw-bold text-success">Search Results for {props.query}</h2>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
           {state.map((element) => {
             return (
