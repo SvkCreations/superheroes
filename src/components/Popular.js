@@ -165,7 +165,7 @@ export default function Popular() {
         
     ])
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 p-4 p-md-0">
             <h2 className="fw-bold text-success">Popular Superheroes</h2>
             <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
                 {pop1.map((element) => {
