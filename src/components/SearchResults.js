@@ -48,7 +48,7 @@ export default function SearchResults(props) {
                   <div className="row mt-3">
                     <div className="col-md-6">
                       <h4 className="fw-bold">Biography</h4>
-                      <p className="p-0 m-0">Full name: {element.biography["full-name"]} </p>
+                      <p className="p-0 m-0">Full name: <span className="text-success fw-bold">{element.biography["full-name"]}</span> </p>
                       <p className="p-0 m-0">Occupation: {element.work.occupation}</p>
                       <p className="p-0 m-0">Place of Birth: {element.biography["place-of-birth"]}</p>
                       <p className="p-0 m-0">Alter egos: {element.biography["alter-egos"]}</p>
@@ -97,7 +97,7 @@ export default function SearchResults(props) {
         </div>
       }
       {!state.success &&
-        <Nodata/>
+        <Nodata />
       }
     </div>
   );
